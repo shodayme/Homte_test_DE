@@ -1,10 +1,10 @@
 FROM python:3.10.8-slim
 
 WORKDIR /app
-COPY api_requirements.txt .
-RUN pip install -r api_requirements.txt
-COPY fetch_api.py .
+COPY api/api_requirements.txt .
+RUN pip install  --no-cache-dir -r api_requirements.txt
+COPY api/fetch_api.py .
 COPY ../logger/loggerfactory.py ./logger/
 
 
-ENTRYPOINT ["uvicorn", "api:fast_app" , "--reload"]
+ENTRYPOINT ["uvicorn", "fetch_api:create_app" , "--reload"]

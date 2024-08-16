@@ -1,3 +1,51 @@
 
 [08/16/2024 08:18:55] - INFO - fetching 10 rows from organizations table ...
 [08/16/2024 08:18:55] - INFO - Data fetched successfully.
+[08/16/2024 10:13:23] - INFO - fetching 10 rows from organizations table ...
+[08/16/2024 10:13:23] - INFO - Data fetched successfully.
+[08/16/2024 10:17:04] - INFO - fetching 10 rows from organizations table ...
+[08/16/2024 10:17:04] - WARNING - Table exists but has no data. Returning empty list
+[08/16/2024 10:32:35] - INFO - fetching 10 rows from organizations table ...
+[08/16/2024 10:32:35] - ERROR - failed to fetch data from db:  ProgrammingError -- (psycopg2.errors.UndefinedTable) relation "organizations" does not exist
+LINE 1: SELECT * from organizations order by id desc limit 10;
+                      ^
+
+[SQL: SELECT * from organizations order by id desc limit 10;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[08/16/2024 10:32:44] - INFO - fetching 10 rows from organizations table ...
+[08/16/2024 10:32:44] - ERROR - failed to fetch data from db:  ProgrammingError -- (psycopg2.errors.UndefinedTable) relation "organizations" does not exist
+LINE 1: SELECT * from organizations order by id desc limit 10;
+                      ^
+
+[SQL: SELECT * from organizations order by id desc limit 10;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[08/16/2024 10:58:57] - INFO - fetching 10 rows from organizations table ...
+[08/16/2024 10:58:57] - ERROR - failed to fetch data from db: ProgrammingError -- (psycopg2.errors.UndefinedTable) relation "organizations" does not exist
+LINE 1: SELECT * from organizations limit 10;
+                      ^
+
+[SQL: SELECT * from organizations limit 10;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[08/16/2024 11:29:24] - INFO - fetching 10 rows from organizations table ...
+[08/16/2024 11:29:24] - ERROR - failed to fetch data from db: ProgrammingError -- (psycopg2.errors.UndefinedTable) relation "organizations" does not exist
+LINE 1: SELECT * from organizations limit 10;
+                      ^
+
+[SQL: SELECT * from organizations limit 10;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[08/16/2024 11:40:50] - INFO - fetching 10 rows from organizations table ...
+[08/16/2024 11:40:50] - ERROR - failed to fetch data from db: ProgrammingError -- (psycopg2.errors.UndefinedTable) relation "organizations" does not exist
+LINE 1: SELECT * from organizations limit 10;
+                      ^
+
+[SQL: SELECT * from organizations limit 10;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[08/16/2024 11:40:52] - INFO - fetching 10 rows from organizations table ...
+[08/16/2024 11:40:52] - ERROR - failed to fetch data from db: ProgrammingError -- (psycopg2.errors.UndefinedTable) relation "organizations" does not exist
+LINE 1: SELECT * from organizations limit 10;
+                      ^
+
+[SQL: SELECT * from organizations limit 10;]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+[08/16/2024 11:51:19] - INFO - fetching 10 rows from organizations table ...
+[08/16/2024 11:51:19] - INFO - Data fetched successfully.

@@ -10,10 +10,12 @@ Docker Compose
 Python
 ### Setup
 #### Clone the Repository
-```git clone https://github.com/shodayme/Homte_test_DE.git```
+```
+git clone https://github.com/shodayme/home_test_de.git
+```
 
 ```
-cd Homte_test_DE
+cd home_test_de
 ```
 #### build the docker images
 ```

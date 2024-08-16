@@ -1,0 +1,41 @@
+services:
+  postgres_db:
+    image: postgres:16
+    container_name: pg_db
+    volumes:
+      - ./db_volume:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: task_user
+      POSTGRES_PASSWORD: de_task_pwd
+      POSTGRES_DB: task_db
+    network_mode: "host"
+
+  data_processor:
+    build:
+      context: .
+      dockerfile: etl/etl.dockerfile
+      args:
+        INPUT_PATH: ${INPUT_PATH}
+    container_name: data_process
+    environment:
+      - INPUT_PATH
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - postgres_db
+    network_mode: "host"
+
+  api:
+    build:
+      context: .
+      dockerfile: api/api.dockerfile
+    container_name: test_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./logs:/app/logs
+    depends_on:
+      - postgres_db
+    network_mode: "host"

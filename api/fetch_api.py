@@ -10,7 +10,7 @@ class FastApp:
         self.log_file = log_file
         self.engine = create_engine(self.database_url)
         self.session_local = sessionmaker(autocommit=False, autoflush=False, bind=self.engine)
-        self.logger = LoggerFactory(self.log_file).get_logger()
+        self.logger = LoggerFactory().get_logger('api_logger', self.log_file)
         self.app = FastAPI()
 
         # Register routes

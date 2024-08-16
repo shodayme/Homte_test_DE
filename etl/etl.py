@@ -11,7 +11,7 @@ from logger.loggerfactory import LoggerFactory
 class Etl:
     def __init__(self, log_file):
         self.db_url = 'postgresql://task_user:de_task_pwd@localhost:5432/task_db'
-        self.logger = LoggerFactory(log_file).get_logger()
+        self.logger = LoggerFactory().get_logger('ETL_logger', log_file)
 
     def _read_csv_data(self, path):
         """
@@ -25,7 +25,7 @@ class Etl:
                         csv_df = pd.read_csv(f, delimiter=',')
                         dataframes.append(csv_df)
             df = pd.concat(dataframes, ignore_index=True)
-            self.logger.info('Loaded the complete CSV files.')
+            self.logger.info(f'Successfully loaded the CSV files under {path}.')
         except Exception as e:
             self.logger.error(f'Could not load csv files {type(e).__name__} -- {str(e)}')
         return df
@@ -91,7 +91,7 @@ def main():
     parser.add_argument('-p', '--data_path', required=True, default=False,
                         help='absolute path to the directory containing CSV files')
     parser.add_argument('-l', '--log_file', required=False, default='./logs/etl_logs.log',
-                        help=f'absolute path to the logs path. Defaults to ./logs/etl_logs.log ')
+                        help=f'absolute path to the logs path. Defaults to  ./logs/etl_logs.log')
     args = parser.parse_args()
     etl = Etl(args.log_file)
     etl.write_to_db(args.data_path)

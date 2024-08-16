@@ -1,7 +1,7 @@
 ## Homte_test_DE
 
 ### Project architecture
-
+![](diagrams/project_structure.png)
 ### Prerequisites
 Docker
 
@@ -47,7 +47,8 @@ pip install -r test_requirements.txt
 
 3. run the following command:
 
-   ```
-   pytest -v
-   ```
-   
+```
+pytest -v
+```
+### Cloud deployment architecture
+![](diagrams/aws_diagram.png)

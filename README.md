@@ -1,7 +1,7 @@
 ## Homte_test_DE
 
 ### Project architecture
-![](diagrams/project_structure.png)
+![](diagrams/project_architecture.png)
 ### Prerequisites
 Docker
 

@@ -35,9 +35,12 @@ where ./data/ is the relative path to the data directory and data_processor is t
 
 #### Acccess the web api:
 
-The Api response should be accessible on the localhost
+The Api response should be accessible under the localhost
 
-```http://localhost:8000/read/first-chunk```
+```
+http://localhost:8000/read/first-chunk
+```
+
 ### Testing
 In order to run the unit tests locally, please perform the following steps under the project root directory:
 1. setup the testing venv

@@ -23,14 +23,16 @@ docker compose build
 ```
 
 ### Usage
-#### start the api and database container
+#### start the api and database containers
 ```
 docker compose up postgres_db api -d
 ```
 #### run the etl
 ```
-docker compose run -e INPUT_PATH=/relative/path/to/data/dir/ data_processor
+docker compose run -e INPUT_PATH=./data/ data_processor
 ```
+where ./data/ is the relative path to the data directory and data_processor is the etl servcie name
+
 ### Testing
 In order to run the unit tests locally, please perform the following steps under the project root directory:
 1. setup the testing venv
